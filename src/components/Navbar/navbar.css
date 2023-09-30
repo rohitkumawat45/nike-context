@@ -1,0 +1,90 @@
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  padding: 2rem;
+}
+
+.logo img {
+  width: 5rem;
+  background-color: white;
+}
+.nav-actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  text-align: center;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  
+}
+.nav-links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: black;
+}
+
+.nav-btn {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-btn .icons {
+  text-decoration: none;
+  padding: 0 1rem;
+  font-weight: 500;
+  color: black;
+}
+
+.nav-btn button{
+  color: black;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  background-color: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 5rem;
+  outline: none;
+  border: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu{
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-btn button:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+}
+
+.nav-btn .icons :hover{
+    color: royalblue;
+}
+
+.nav-links a:hover{
+    text-decoration: underline;
+}
