@@ -4,29 +4,23 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 5rem;
   padding: 2rem;
+  height: 5rem;
 }
 
 .logo img {
-  width: 5rem;
   background-color: white;
+  width: 7rem;
 }
+/* 
 .nav-actions{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65%;
+  width: 50%;
   text-align: center;
-}
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  
-}
+} */
+
 .nav-links a {
   font-size: 1.5rem;
   text-decoration: none;
@@ -37,20 +31,19 @@
 }
 
 .nav-btn {
-  width: 25%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .nav-btn .icons {
   text-decoration: none;
-  padding: 0 1rem;
   font-weight: 500;
   color: black;
 }
 
-.nav-btn button{
+.nav-btn button {
   color: black;
   font-size: 1.2rem;
   margin-left: 1rem;
@@ -65,26 +58,111 @@
   transition: all 0.3s ease-in-out;
 }
 
-.menu{
+.nav-btn button:hover {
   background-color: black;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  color: white;
+  border: 1px solid grey;
 }
 
-.nav-btn button:hover{
+.nav-btn .icons :hover {
+  color: royalblue;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.ham-menu {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .ham-menu {
+    display: block;
+    z-index: 1;
+  }
+  .navbar {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .logo img {
+    background-color: white;
+    width: 3.5rem;
+  }
+  .nav-links,
+  .nav-btn {
+    display: none;
+  }
+
+  .toggleMenu {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    margin: 1rem;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .ham-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+  }
+
+  .ham-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    color: black;
+  }
+
+  .toggle-menuBtns {
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .toggle-menuBtns button {
+    color: black;
+    font-size: 1rem;
+    background-color: white;
+    padding: 0.5rem 0.7rem;
+    border-radius: 5rem;
+    outline: none;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ham-links a:hover {
+    text-decoration: underline;
+  }
+
+  .toggle-menuBtns button:hover{
     background-color: black;
     color: white;
     border: 1px solid grey;
-}
+  }
 
-.nav-btn .icons :hover{
+  .hamicons a:hover {
     color: royalblue;
-}
-
-.nav-links a:hover{
-    text-decoration: underline;
+  }
 }

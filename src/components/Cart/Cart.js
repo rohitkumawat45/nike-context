@@ -16,31 +16,33 @@ function Cart() {
           <h1>Your Items</h1>
         </div>
         <div className='item-wrapper'>
-        {
-          PRODUCTS.map((items) => {
-            if (cartItems[items.id] !== 0) {
-              return <div className='item-card'>
-                <div className='item-image'>
-                  <img src={items.productImage} alt="" />
-                </div>
-                <div className="item-details">
-                  <h3 className="">{items.productName}</h3>
-                  <h4 className="">INR {items.price}</h4>
-                </div>
-                <div className='func'>
-                  <div className="counter">
-                    <button onClick={() => addToCart(items.id)}>+</button>
-                    <p>{cartItems[items.id]}</p>
-                    <button onClick={() => removeFromCart(items.id)}>-</button>
+          {
+            PRODUCTS.map((items) => {
+              if (cartItems[items.id] !== 0) {
+                return <div className='item-card' key={items.id}>
+                  <div className='item-image'>
+                    <img src={items.productImage} alt="" />
                   </div>
-                  <div className='cartbtn'>
-                    <button onClick={() => removeItem(items.id)}>Remove</button>
+                  <div className="allDetails">
+                    <div className="item-details">
+                      <h3 className="">{items.productName}</h3>
+                      <h4 className="">INR {items.price}</h4>
+                    </div>
+                    <div className='func'>
+                      <div className="counter">
+                        <button onClick={() => addToCart(items.id)}>+</button>
+                        <p>{cartItems[items.id]}</p>
+                        <button onClick={() => removeFromCart(items.id)}>-</button>
+                      </div>
+                      <div className='cartbtn'>
+                        <button onClick={() => removeItem(items.id)}>Remove</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            }
-          })
-        }
+              }
+            })
+          }
         </div>
       </div>
       <div className="cart-summary">
