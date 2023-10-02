@@ -172,7 +172,7 @@
   box-shadow: 2px 2px 5px gray;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
   .cart {
     width: 100%;
     flex-direction: column;
@@ -243,12 +243,12 @@
     width: 100%;
   }
 
-  .cart-summary{
-    position: sticky;
+  .cart-summary {
+    /* position: sticky; */
     padding: 1rem;
     width: 100%;
     margin: 0rem;
-    bottom: 0;
+    /* bottom: 0; */
   }
 
   .details .funbtn {
@@ -256,8 +256,64 @@
     gap: 0rem;
   }
 
-  .funbtn button{
+  .funbtn button {
     font-size: 1rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .cart {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .cart-item {
+    width: 100%;
+  }
+
+  .item-wrapper {
+    border: none;
+    border-left: none ;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .item-card img {
+    width: 100%;
+     border: none;
+  }
+
+  .item-card {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .counter button {
+    font-size: 1.5rem;
+  }
+
+  .counter p {
+    font-size: 1.5rem;
+    padding: 0rem 2rem;
+  }
+  .cartbtn button {
+    font-size: 1.3rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .cart-summary {
+    position: static;
+    width: calc(100% - 64px);
+  }
+
+  .details .funbtn {
+    justify-content: space-between;
+    gap: 1rem;
   }
 }

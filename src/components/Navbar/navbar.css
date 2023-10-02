@@ -75,11 +75,12 @@
   display: none;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
   .ham-menu {
     display: block;
     z-index: 1;
   }
+
   .navbar {
     width: 100%;
     padding: 1rem;
@@ -98,15 +99,18 @@
   .toggleMenu {
     position: absolute;
     right: 0;
-    background-color: white; 
-    width: 100%;  
+    background-color: white;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: transparent;
   }
 
   .menu {
     margin: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: whitesmoke;
   }
 
   .ham-links {
@@ -115,8 +119,6 @@
     align-items: center;
     flex-direction: column;
     list-style: none;
-    border-radius: 2rem;
-    background-color: whitesmoke;
     padding: 1rem;
   }
 
@@ -129,13 +131,12 @@
   }
 
   .toggle-menuBtns {
-    background-color: whitesmoke;
-    border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    padding-bottom: 1rem;
   }
 
   .toggle-menuBtns button {
@@ -156,7 +157,101 @@
     text-decoration: underline;
   }
 
-  .toggle-menuBtns button:hover{
+  .toggle-menuBtns button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+  }
+
+  .hamicons a:hover {
+    color: royalblue;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+
+  .ham-menu {
+    display: block;
+    z-index: 1;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .logo img {
+    background-color: white;
+    width: 3.5rem;
+  }
+  .nav-links,
+  .nav-btn {
+    display: none;
+  }
+
+  .toggleMenu {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: transparent;
+  }
+
+  .menu {
+    margin: 1rem 0;
+    gap: 1rem;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: whitesmoke;
+  }
+
+  .ham-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    padding: 1rem;
+  }
+
+  .ham-links a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    color: black;
+  }
+
+  .toggle-menuBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .toggle-menuBtns button {
+    color: black;
+    font-size: 1.4rem;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    outline: none;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ham-links a:hover {
+    text-decoration: underline;
+  }
+
+  .toggle-menuBtns button:hover {
     background-color: black;
     color: white;
     border: 1px solid grey;
