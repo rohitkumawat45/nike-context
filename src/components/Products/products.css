@@ -10,7 +10,6 @@
 }
 
 .product-card {
-  background-color: white;
   border-radius: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -79,17 +78,16 @@
 }
 
 @media screen and (max-width: 550px) {
-  .product-card img {
-  }
   .title {
     margin: 1rem;
   }
 
   .all-products {
     width: 100%;
-    grid-template-columns: repeat(2, 12rem);
-    margin: 1rem;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin: 1rem 0rem;
+    padding: 1rem;
   }
 
   .product-card .product-details {
