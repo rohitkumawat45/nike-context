@@ -53,7 +53,7 @@ function Cart() {
           <p className='total'>Sub Total : {getTotalCartAmount()}</p>
           <div className="funbtn">
             <button>Checkout</button>
-            <button onClick={() => navigate("/")}>Continue Shopping</button>
+            <button onClick={() => navigate("/home")}>Continue Shopping</button>
           </div>
         </div>
       </div>
