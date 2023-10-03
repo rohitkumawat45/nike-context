@@ -41,12 +41,19 @@ function ProductProvider(props) {
         setCartItems(getDefaultCart());
     };
 
+    const addToWishlist = (itemId)=>{
+        setCartItems((prev)=>({
+            ...prev, [itemId]: 1
+        }))
+    }
+
     const contextValue = {
         cartItems,
         addToCart,
         removeFromCart,
         removeItem,
         getTotalCartAmount,
+        addToWishlist,
         checkout,
     };
 

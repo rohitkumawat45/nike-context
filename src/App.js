@@ -4,6 +4,8 @@ import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import Cart from './components/Cart/Cart'
 import ProductProvider from './context/ProductContext'
+import Contact from './components/Contact/Contact';
+import Wishlist from './components/Wishlisht/Wishlist'
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
             <Routes>
               <Route path='/' index element={<Home />} />
               <Route path='/cart' element={<Cart />} />
-              <Route path='/contact' />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/wishlist' element={<Wishlist />} />
             </Routes>
           </Router>
         </ProductProvider>

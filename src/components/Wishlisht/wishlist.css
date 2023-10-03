@@ -1,0 +1,205 @@
+.wishlist-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+}
+
+.wishlist-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wishlist-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 2rem;
+  border-bottom: 1px solid gray;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: all 300ms ease-in-out;
+  background-color: whitesmoke;
+}
+
+.card .details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0.5rem 2rem;
+}
+
+.card .details h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+.card .details h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.card:hover {
+  box-shadow: 0 3px 7px black;
+  transform: scale(1.02);
+}
+
+.functions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 2rem;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.removebtn button {
+  cursor: pointer;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  outline: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.removebtn button:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 5px gray;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .wishlist-card {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .wishlist-item {
+    width: 100%;
+  }
+
+  .wishlist-wrapper {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 1rem;
+    gap: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    margin: 0.1rem;
+    border-right: 1px solid gray;
+  }
+
+  .card {
+    border: 2px solid black;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .card .allDetails {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .card .details {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .card .details h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .card .details h4 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .functions {
+    
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0rem;
+    padding: 0 0.5rem;
+  }
+
+  .removebtn button {
+    font-size: 1.1rem;
+    padding: 0.1rem 0.7rem;
+    width: 100%;
+  }
+
+  .details .funbtn {
+    border: 2px solid black;
+    justify-content: space-between;
+    gap: 0rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .wishlist-card {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .wishlist-item {
+    width: 100%;
+  }
+
+  .wishlist-wrapper {
+    border: none;
+    border-left: none ;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card img {
+    width: 100%;
+     border: none;
+  }
+
+  .card {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .cartbtn button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .details .funbtn {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}

@@ -24,7 +24,7 @@ function Navbar() {
             </ul>
           </div>
           <div className='nav-btn'>
-            <Link className="icons" to="/user"><PiHeartStraight size={35} /></Link>
+            <Link className="icons" to="/wishlist"><PiHeartStraight size={35} /></Link>
             <Link className="icons" to="/cart" ><PiBagBold size={35} /></Link>
             <button>Sign In</button>
           </div>

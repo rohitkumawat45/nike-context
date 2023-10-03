@@ -1,0 +1,241 @@
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem;
+}
+
+.head h1 {
+  font-size: 3rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+}
+.search {
+  border: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.search input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.search a {
+  text-decoration: none;
+  color: gray;
+  padding: 1rem;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quick-assists {
+  width: 100%;
+}
+
+.quick-head {
+  margin: 3rem;
+  border-bottom: 1px solid gray;
+}
+
+.quick-head h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.quick-head p {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.hr {
+  margin: 2rem;
+  text-align: center;
+}
+
+.quick-links {
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.link-group h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.link-group p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.contactUs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.contact-cards img {
+  width: 5rem;
+  margin: 2rem;
+}
+
+.contact-cards h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 500px) {
+  .contact {
+    padding: 0;
+    width: 100%;
+  }
+
+  .head {
+    margin: 1rem;
+  }
+
+  .head h1 {
+    font-size: 2rem;
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .search {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 2rem;
+  }
+
+  .search input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+  }
+
+  .search a {
+    padding: 0.5rem;
+  }
+
+  .quick-head{
+    margin: 1rem;
+  }
+
+  .quick-head h2{
+    font-size: 1.5rem ;
+  }
+
+  .quick-head p{
+    font-size: 1rem;
+  }
+
+  .quick-links {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .link-group h3{
+    font-size: 1.2rem;
+  }
+  
+  .link-group p {
+    font-size: 1rem;
+  }
+  
+.contact-methods{
+    padding: 1rem;
+}
+.heading{
+      font-size: 0.8rem
+}
+.contactUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-cards img{
+    width: none;
+    margin: 1rem;
+}
+.contact-cards {
+  margin: 1rem 0;
+}
+.contact-cards{
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.contact-cards h3{
+    font-size: 1rem;
+    text-align: start;
+    font-weight: 500;
+}
+}

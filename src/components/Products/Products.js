@@ -6,7 +6,7 @@ import "./products.css"
 
 function Products() {
 
-   const {cartItems, addToCart}=  useContext(ProductContext);
+   const {cartItems, addToCart ,addToWishlist}=  useContext(ProductContext);
     const cartItemCount = cartItems[PRODUCTS.id];
 
   return (
@@ -32,7 +32,7 @@ function Products() {
                             </h4>
                         </div>
                         <div className="btns">
-                            <PiHeartStraight className="wishlist"size={35}/>
+                            <PiHeartStraight className="wishlist" size={35} onClick={() => { addToWishlist(product.id)}}/>
                             <button className="addToCartBttn" onClick={() => addToCart(product.id)}>
                                 Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
                             </button>
