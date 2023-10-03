@@ -13,6 +13,7 @@ const getDefaultCart = () => {
 
 function ProductProvider(props) {
     const [cartItems, setCartItems] = useState(getDefaultCart());
+    const [toggleHeart, setToggleHeart] = useState(false);
 
     const getTotalCartAmount = () => {
         let totalAmount = 0;
@@ -41,19 +42,32 @@ function ProductProvider(props) {
         setCartItems(getDefaultCart());
     };
 
-    const addToWishlist = (itemId)=>{
+    const addToWishlist = (itemId, toggleHeart)=>{
         setCartItems((prev)=>({
             ...prev, [itemId]: 1
-        }))
+        }));
+        for(let i=0; i<PRODUCTS.length ; i++){
+            let proId = PRODUCTS.find((product)=> product.id=== itemId);
+            if (proId){
+                setToggleHeart((toggleHeart) => !toggleHeart);
+            }
+        }
     }
+
+    const removeWishList = (itemId, toggleHeart) => {
+        setCartItems((prev) => ({ ...prev, [itemId]: 0 }));
+        setToggleHeart((toggleHeart) => !toggleHeart)
+    };
 
     const contextValue = {
         cartItems,
+        toggleHeart,
         addToCart,
         removeFromCart,
         removeItem,
         getTotalCartAmount,
         addToWishlist,
+        removeWishList,
         checkout,
     };
 

@@ -24,7 +24,7 @@ function Navbar() {
             </ul>
           </div>
           <div className='nav-btn'>
-            <Link className="icons" to="/wishlist"><PiHeartStraight size={35} /></Link>
+            <Link className="icons" to= "/wishlist"><PiHeartStraight size={35} /></Link>
             <Link className="icons" to="/cart" ><PiBagBold size={35} /></Link>
             <button>Sign In</button>
           </div>
@@ -48,7 +48,7 @@ function Navbar() {
                       </ul>
                     </div>
                     <div className='toggle-menuBtns'>
-                      <Link className="hamicons" to="/user"><PiHeartStraight size={35} /></Link>
+                      <Link className="hamicons" to="/wishlist"><PiHeartStraight size={35} /></Link>
                       <Link className="hamicons" to="/cart" ><PiBagBold size={35} /></Link>
                       <button>Sign In</button>
                     </div>
