@@ -11,9 +11,17 @@ const getDefaultCart = () => {
     return cart;
 };
 
+const getDefaultWishlist=()=>{
+    let wishlist ={};
+    for(let i =1; i< PRODUCTS.length+1; i++){
+        wishlist[i]=0;
+    }
+    return wishlist;
+}
+
 function ProductProvider(props) {
     const [cartItems, setCartItems] = useState(getDefaultCart());
-    const [toggleHeart, setToggleHeart] = useState(false);
+    const [wishlistItems, setWishlistItems] = useState(getDefaultWishlist());
 
     const getTotalCartAmount = () => {
         let totalAmount = 0;
@@ -42,26 +50,17 @@ function ProductProvider(props) {
         setCartItems(getDefaultCart());
     };
 
-    const addToWishlist = (itemId, toggleHeart)=>{
-        setCartItems((prev)=>({
-            ...prev, [itemId]: 1
-        }));
-        for(let i=0; i<PRODUCTS.length ; i++){
-            let proId = PRODUCTS.find((product)=> product.id=== itemId);
-            if (proId){
-                setToggleHeart((toggleHeart) => !toggleHeart);
-            }
-        }
+    const addToWishlist = (itemId)=>{
+        setWishlistItems((prev)=>({...prev, [itemId]: prev[itemId] - 1}));
     }
 
-    const removeWishList = (itemId, toggleHeart) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: 0 }));
-        setToggleHeart((toggleHeart) => !toggleHeart)
+    const removeWishList = (itemId) => {
+        setWishlistItems((prev) => ({ ...prev, [itemId]: 0 }));
     };
 
     const contextValue = {
         cartItems,
-        toggleHeart,
+        wishlistItems,
         addToCart,
         removeFromCart,
         removeItem,

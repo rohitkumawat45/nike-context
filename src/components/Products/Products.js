@@ -6,13 +6,8 @@ import "./products.css"
 
 function Products() {
 
-    const { cartItems, addToCart, addToWishlist, removeItem , removeWishList ,toggleHeart} = useContext(ProductContext);
+    const { cartItems, addToCart, addToWishlist } = useContext(ProductContext);
     const cartItemCount = cartItems[PRODUCTS.id];
-
-    useEffect(()=>{
-
-    }
-    ,[toggleHeart])
 
     return (
         <div className='products'>
@@ -44,7 +39,8 @@ function Products() {
                                             <PiHeartStraightFill className="wishlist" size={35} onClick={() => {
                                                 removeWishList(product.id, toggleHeart)}} />
                                     } */}
-                                    <PiHeartStraight className="wishlist" size={35} onClick={() => { addToWishlist(product.id) }} />
+                                    <PiHeartStraight className="wishlist" size={35} onClick={() => {
+                                         addToWishlist(product.id) }} />
                                     <button className="addToCartBttn" onClick={() => addToCart(product.id)}>
                                         Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
                                     </button>

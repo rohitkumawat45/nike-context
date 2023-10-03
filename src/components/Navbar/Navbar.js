@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PiBagBold, PiHeartStraight } from 'react-icons/pi'
 import "./navbar.css"
@@ -7,6 +7,16 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  useEffect(() => {
+    if(toggleMenu){
+      document.body.style.overflow = "hidden";
+    }
+    else{
+      document.body.style.overflow = "scroll";
+    }
+  }, [toggleMenu]);
+
   return (
     <>
       <nav>
@@ -24,7 +34,7 @@ function Navbar() {
             </ul>
           </div>
           <div className='nav-btn'>
-            <Link className="icons" to= "/wishlist"><PiHeartStraight size={35} /></Link>
+            <Link className="icons" to="/wishlist"><PiHeartStraight size={35} /></Link>
             <Link className="icons" to="/cart" ><PiBagBold size={35} /></Link>
             <button>Sign In</button>
           </div>
@@ -37,7 +47,7 @@ function Navbar() {
             }
             {
               toggleMenu && (
-                <div className='toggleMenu'>
+                <div className='toggleMenu' >
                   <div className='menu'>
                     <div className='allLinks'>
                       <ul className='ham-links'>

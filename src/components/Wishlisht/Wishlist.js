@@ -5,7 +5,7 @@ import './wishlist.css'
 
 function Wishlist() {
 
-    const { cartItems, removeItem } =useContext(ProductContext);
+    const { wishlistItems, removeWishList } =useContext(ProductContext);
 
     return (
         <div className='wishlist-card'>
@@ -16,7 +16,7 @@ function Wishlist() {
                 <div className='wishlist-wrapper'>
                     {
                         PRODUCTS.map((items) => {
-                            if (cartItems[items.id] !== 0) {
+                            if (wishlistItems[items.id] !== 0) {
                                 return <div className='card' key={items.id}>
                                     <div className='image'>
                                         <img src={items.productImage} alt="" />
@@ -28,7 +28,7 @@ function Wishlist() {
                                         </div>
                                         <div className='functions'>
                                             <div className='removebtn'>
-                                                <button onClick={() => removeItem(items.id)}>Remove</button>
+                                                <button onClick={() => removeWishList(items.id)}>Remove</button>
                                             </div>
                                         </div>
                                     </div>
