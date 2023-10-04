@@ -18,8 +18,8 @@ function Navbar() {
   }, [toggleMenu]);
 
   return (
-    <>
-      <nav>
+    <div className='nav'>
+      <div>
         <div className='navbar'>
           <div className='logo'>
             <img src={logo} alt="logo" />
@@ -27,7 +27,7 @@ function Navbar() {
           {/* <div className='nav-actions'> */}
           <div className='links'>
             <ul className='nav-links'>
-              <Link to="/">Home</Link>
+              <Link to="/nike-context">Home</Link>
               <Link to="/contact">Contact</Link>
               <Link to="/categories">Categories</Link>
               <Link to="/whatsNew">What's New</Link>
@@ -51,7 +51,7 @@ function Navbar() {
                   <div className='menu'>
                     <div className='allLinks'>
                       <ul className='ham-links'>
-                        <Link to="/">Home</Link>
+                        <Link to="/nike-context">Home</Link>
                         <Link to="/contact">Contact</Link>
                         <Link to="/categories">Categories</Link>
                         <Link to="/whatsNew">What's New</Link>
@@ -68,8 +68,8 @@ function Navbar() {
             }
           </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </div>
   )
 }
 

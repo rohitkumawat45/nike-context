@@ -6,10 +6,23 @@ import "./products.css"
 
 function Products() {
 
-    const { cartItems, addToCart, addToWishlist } = useContext(ProductContext);
+    const { cartItems, addToCart, addToWishlist, removeWishlist } = useContext(ProductContext);
     const cartItemCount = cartItems[PRODUCTS.id];
+    const [likedItems, setLikedItems] = useState([]);
+    const isItemLiked = (id) => likedItems.includes(id);
+
+    const toggleLike = (id) => {
+        if (isItemLiked(id)) {
+            // If item is liked, remove it from likedItems
+            setLikedItems(likedItems.filter((itemId) => itemId !== id));
+        } else {
+            // If item is not liked, add it to likedItems
+            setLikedItems([...likedItems, id]);
+        }
+    };
 
     return (
+
         <div className='products'>
 
             <div className="products-wrapper">
@@ -32,15 +45,27 @@ function Products() {
                                     </h4>
                                 </div>
                                 <div className="btns">
-                                    {/* {
-                                        !toggleHeart ? <PiHeartStraight className="wishlist" size={35} onClick={() => {
-                                            addToWishlist(product.id, toggleHeart);}} /> 
-                                            :
-                                            <PiHeartStraightFill className="wishlist" size={35} onClick={() => {
-                                                removeWishList(product.id, toggleHeart)}} />
-                                    } */}
-                                    <PiHeartStraight className="wishlist" size={35} onClick={() => {
-                                         addToWishlist(product.id) }} />
+                                    {isItemLiked(product.id) ? (
+                                        <PiHeartStraightFill
+                                            className="wishlist"
+                                            size={35}
+                                            onClick={() => {
+                                                toggleLike(product.id);
+                                                removeWishlist(product.id);
+                                            }}
+                                        />
+                                    ) : (
+                                        <PiHeartStraight
+                                            className="wishlist"
+                                            size={35}
+                                            onClick={() => {
+                                                toggleLike(product.id);
+                                                addToWishlist(product.id);
+                                            }}
+                                        />
+                                    )}
+                                    {/* <PiHeartStraight className="wishlist" size={35} onClick={() => {
+                                         addToWishlist(product.id) }} /> */}
                                     <button className="addToCartBttn" onClick={() => addToCart(product.id)}>
                                         Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
                                     </button>

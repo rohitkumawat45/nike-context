@@ -15,7 +15,7 @@ function App() {
           <Router>
             <Navbar />
             <Routes>
-              <Route path='/' index element={<Home />} />
+              <Route path='/nike-context' index element={<Home />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/wishlist' element={<Wishlist />} />
