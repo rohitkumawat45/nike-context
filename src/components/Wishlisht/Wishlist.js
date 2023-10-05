@@ -5,7 +5,7 @@ import './wishlist.css'
 
 function Wishlist() {
 
-    const { wishlistItems, removeWishList } =useContext(ProductContext);
+    const { wishlistItems, removeWishlist, addToCart } =useContext(ProductContext);
 
     return (
         <div className='wishlist-card'>
@@ -28,7 +28,8 @@ function Wishlist() {
                                         </div>
                                         <div className='functions'>
                                             <div className='removebtn'>
-                                                <button onClick={() => removeWishList(items.id)}>Remove</button>
+                                                <button onClick={() => addToCart(items.id)}>Add To Cart</button>
+                                                <button onClick={() => removeWishlist(items.id)}>-</button>
                                             </div>
                                         </div>
                                     </div>

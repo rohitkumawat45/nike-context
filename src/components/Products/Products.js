@@ -8,6 +8,7 @@ function Products() {
 
     const { cartItems, addToCart, addToWishlist, removeWishlist } = useContext(ProductContext);
     const cartItemCount = cartItems[PRODUCTS.id];
+    const[search , setSearch]= useState('');
     const [likedItems, setLikedItems] = useState([]);
     const isItemLiked = (id) => likedItems.includes(id);
 
@@ -20,6 +21,8 @@ function Products() {
             setLikedItems([...likedItems, id]);
         }
     };
+    
+    console.log(search);
 
     return (
 
@@ -28,10 +31,12 @@ function Products() {
             <div className="products-wrapper">
                 <div className='title'>
                     <h1>Shop Products</h1>
+                    <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
                 </div>
                 <div className="all-products">
                     {
-                        PRODUCTS.map((product) =>
+                        PRODUCTS.filter((product)=> {
+                            return search.toLowerCase === '' ? product : product.productName.toLowerCase().includes(search.toLowerCase())}).map((product) =>
                             <div className='product-card' key={product.id}>
                                 <div>
                                     <img src={product.productImage} alt="" />
@@ -67,7 +72,7 @@ function Products() {
                                     {/* <PiHeartStraight className="wishlist" size={35} onClick={() => {
                                          addToWishlist(product.id) }} /> */}
                                     <button className="addToCartBttn" onClick={() => addToCart(product.id)}>
-                                        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+                                        Add To Cart {cartItemCount > 0 && <div> ({cartItemCount})</div>}
                                     </button>
                                 </div>
                             </div>

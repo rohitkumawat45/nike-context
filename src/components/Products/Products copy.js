@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { PRODUCTS } from '../../products';
 import { PiHeartStraight, PiHeartStraightFill } from 'react-icons/pi'
 import { ProductContext } from '../../context/ProductContext';
@@ -8,6 +8,7 @@ function Products() {
 
     const { cartItems, addToCart, addToWishlist } = useContext(ProductContext);
     const cartItemCount = cartItems[PRODUCTS.id];
+    const [search, setSearch] = useState('');
 
     return (
         <div className='products'>
@@ -15,10 +16,13 @@ function Products() {
             <div className="products-wrapper">
                 <div className='title'>
                     <h1>Shop Products</h1>
+                    <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
                 </div>
                 <div className="all-products">
                     {
-                        PRODUCTS.map((product) =>
+                        PRODUCTS.filter((product) => {
+                            return search.toLowerCase === '' ? product : product.productName.toLowerCase().includes(search.toLowerCase())
+                        }).map((product) =>
                             <div className='product-card' key={product.id}>
                                 <div>
                                     <img src={product.productImage} alt="" />

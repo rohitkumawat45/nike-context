@@ -50,12 +50,12 @@ function ProductProvider(props) {
         setCartItems(getDefaultCart());
     };
 
-    const addToWishlist = (itemId)=>{
-        setWishlistItems((prev)=>({...prev, [itemId]: prev[itemId] - 1}));
+    const addToWishlist = (proId)=>{
+        setWishlistItems((prev) => ({ ...prev, [proId]: 1}));
     }
 
-    const removeWishList = (itemId) => {
-        setWishlistItems((prev) => ({ ...prev, [itemId]: 0 }));
+    const removeWishlist = (proId) => {
+        setWishlistItems((prev) => ({ ...prev, [proId]: 0 }));
     };
 
     const contextValue = {
@@ -66,7 +66,7 @@ function ProductProvider(props) {
         removeItem,
         getTotalCartAmount,
         addToWishlist,
-        removeWishList,
+        removeWishlist,
         checkout,
     };
 

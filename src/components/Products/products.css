@@ -1,11 +1,24 @@
 .title {
   margin: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.searchFilter {
+  width: 50%;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .all-products {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin:1rem 5rem;
+  margin: 1rem 5rem;
   gap: 2rem;
 }
 
@@ -17,7 +30,6 @@
   flex-direction: column;
   transition: all 300ms ease-in-out;
   background-color: whitesmoke;
-  
 }
 
 .product-card img {
@@ -33,7 +45,6 @@
   align-items: flex-start;
   flex-direction: column;
   padding: 0.5rem 1.5rem;
- 
 }
 
 .product-details h3 {
@@ -81,7 +92,14 @@
 
 @media screen and (max-width: 500px) {
   .title {
-    margin: 2rem;
+    margin: 1rem;
+    flex-direction: column;
+  }
+
+  .searchFilter {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
   }
 
   .all-products {
@@ -113,15 +131,13 @@
     padding: 0.5rem;
   }
 
-  .btns .addToCartBttn{
+  .btns .addToCartBttn {
     font-size: 0.8rem;
     padding: 0.4rem 0.9rem;
   }
-  
 }
 
-@media screen and (min-width:500px) and (max-width:768px){
-
+@media screen and (min-width: 500px) and (max-width: 768px) {
   .title {
     margin: 2rem;
   }
@@ -134,8 +150,8 @@
     padding: 2rem;
   }
 
-  .product-card{
-    gap: .5rem;
+  .product-card {
+    gap: 0.5rem;
   }
 
   .product-card .product-details {
@@ -158,7 +174,7 @@
     padding: 1rem;
   }
 
-  .btns .addToCartBttn{
+  .btns .addToCartBttn {
     font-size: 1rem;
     padding: 0.3rem 1rem;
   }
