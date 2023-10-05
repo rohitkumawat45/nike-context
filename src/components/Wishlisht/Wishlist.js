@@ -28,8 +28,8 @@ function Wishlist() {
                                         </div>
                                         <div className='functions'>
                                             <div className='removebtn'>
-                                                <button onClick={() => addToCart(items.id)}>Add To Cart</button>
-                                                <button onClick={() => removeWishlist(items.id)}>-</button>
+                                                <button className= "addBtn" onClick={() => addToCart(items.id)}>Add To Cart</button>
+                                                <button onClick={() => removeWishlist(items.id)}>Remove</button>
                                             </div>
                                         </div>
                                     </div>

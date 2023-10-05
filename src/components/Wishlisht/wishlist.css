@@ -138,8 +138,13 @@
     padding: 0 1rem;
   }
 
+  .removebtn{
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .removebtn button {
-    padding: 0.2rem 2rem;
+    padding: 0.2rem 1rem;
     font-size: 1rem;
   }
 }
