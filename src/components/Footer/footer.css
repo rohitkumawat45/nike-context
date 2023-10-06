@@ -23,14 +23,14 @@
   gap: 2rem;
 }
 
- h3 {
+ .head3 {
   font-size: 1rem;
   font-weight: 500;
   line-height: 2;
   color: whitesmoke;
 }
 
-p {
+.para {
   opacity: 0.5;
   line-height: 2.5;
   font-weight: 300;
@@ -76,7 +76,7 @@ p {
     flex-direction: column;
   }
 
- h3{
+ .head3{
     font-size: 1rem;
     font-weight: 400;
 }
@@ -101,7 +101,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  p{
+  .para{
     line-height: 2;
   }
 

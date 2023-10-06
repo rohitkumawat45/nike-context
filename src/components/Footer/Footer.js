@@ -9,30 +9,30 @@ function Footer() {
             <div className="top">
                 <div className="top-left">
                     <div className="section1">
-                        <h3>FIND A STORE</h3>
-                        <h3>BECOME A MEMBER</h3>
-                        <h3>Send Us Feedback</h3>
-                        <h3>STUDENT DISCOUNTS</h3>
+                        <h3 className='head3'>FIND A STORE</h3>
+                        <h3 className='head3'>BECOME A MEMBER</h3>
+                        <h3 className='head3'>Send Us Feedback</h3>
+                        <h3 className='head3'>STUDENT DISCOUNTS</h3>
                     </div>
                     <div className="section2">
-                        <div><h3>GET HELP</h3></div>
+                        <div><h3 className='head3'>GET HELP</h3></div>
                         <div className='quicks'>
-                            <p>Order Status</p>
-                            <p>Delivery</p>
-                            <p>Returns</p>
-                            <p>Payment Options</p>
-                            <p>Contact Us On Nike.com</p>
-                            <p>Contact Us On All Other</p>
-                            <p>Inquiries</p>
+                            <p className='para'>Order Status</p>
+                            <p className='para'>Delivery</p>
+                            <p className='para'>Returns</p>
+                            <p className='para'>Payment Options</p>
+                            <p className='para'>Contact Us On Nike.com</p>
+                            <p className='para'>Contact Us On All Other</p>
+                            <p className='para'>Inquiries</p>
                         </div>
                     </div>
                     <div className="section3">
-                        <div><h3>ABOUT NIKE</h3></div>
+                        <div><h3 className='head3'>ABOUT NIKE</h3></div>
                         <div className='quicks'>
-                            <p>News</p>
-                            <p>Careers</p>
-                            <p>Investors</p>
-                            <p>Sustainability</p>
+                            <p className='para'>News</p>
+                            <p className='para'>Careers</p>
+                            <p className='para'>Investors</p>
+                            <p className='para'>Sustainability</p>
                         </div>
                     </div>
                 </div>
@@ -45,13 +45,13 @@ function Footer() {
             </div>
             <div className="bottom">
                 <div className="left">
-                    <p><ImLocation2 />  India &copy; 2023 All Rights Reserved.</p>
+                    <p className='para'><ImLocation2 />  India &copy; 2023 All Rights Reserved.</p>
                 </div>
                 <div className="right">
-                    <p>Guides</p>
-                    <p>Terms Of Sales</p>
-                    <p>Terms Of Use</p>
-                    <p>Nike Privacy Policy</p>
+                    <p className='para'>Guides</p>
+                    <p className='para'>Terms Of Sales</p>
+                    <p className='para'>Terms Of Use</p>
+                    <p className='para'>Nike Privacy Policy</p>
                 </div>
             </div>
         </div>
