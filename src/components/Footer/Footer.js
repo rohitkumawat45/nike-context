@@ -15,21 +15,25 @@ function Footer() {
                         <h3>STUDENT DISCOUNTS</h3>
                     </div>
                     <div className="section2">
-                        <h3>GET HELP</h3>
-                        <p>Order Status</p>
-                        <p>Delivery</p>
-                        <p>Returns</p>
-                        <p>Payment Options</p>
-                        <p>Contact Us On Nike.com</p>
-                        <p>Contact Us On All Other</p>
-                        <p>Inquiries</p>
+                        <div><h3>GET HELP</h3></div>
+                        <div className='quicks'>
+                            <p>Order Status</p>
+                            <p>Delivery</p>
+                            <p>Returns</p>
+                            <p>Payment Options</p>
+                            <p>Contact Us On Nike.com</p>
+                            <p>Contact Us On All Other</p>
+                            <p>Inquiries</p>
+                        </div>
                     </div>
                     <div className="section3">
-                        <h3>ABOUT NIKE</h3>
-                        <p>News</p>
-                        <p>Careers</p>
-                        <p>Investors</p>
-                        <p>Sustainability</p>
+                        <div><h3>ABOUT NIKE</h3></div>
+                        <div className='quicks'>
+                            <p>News</p>
+                            <p>Careers</p>
+                            <p>Investors</p>
+                            <p>Sustainability</p>
+                        </div>
                     </div>
                 </div>
                 <div className="top-right">
