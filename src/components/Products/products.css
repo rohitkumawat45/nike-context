@@ -91,7 +91,7 @@
 }
 
 .product-card:hover {
-  box-shadow: 0 3px 7px black;
+  box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.2);
   transform: scale(1.02);
 }
 

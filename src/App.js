@@ -6,6 +6,7 @@ import Cart from './components/Cart/Cart'
 import ProductProvider from './context/ProductContext'
 import Contact from './components/Contact/Contact';
 import Wishlist from './components/Wishlisht/Wishlist'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path='/contact' element={<Contact />} />
               <Route path='/wishlist' element={<Wishlist />} />
             </Routes>
+            <Footer/>
           </Router>
         </ProductProvider>
     </div>

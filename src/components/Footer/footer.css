@@ -1,0 +1,63 @@
+.footer-card{
+   background-color: black;
+   color: white;
+   padding: 3rem 5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   width: 100%;
+   padding-bottom: 1rem;
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.top-left{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.section1, .section2, .section3 h3{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2;
+    color: whitesmoke;
+}
+
+.section2 p, .section3 p{
+    opacity: 0.5;
+    line-height: 2.5;
+    font-weight: 300;
+}
+
+.top-right{
+    display: flex;
+    gap: 3rem;
+}
+
+.top-right a{
+    color: white;
+    text-decoration: none;    
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.bottom .right{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    opacity: 0.5;
+}

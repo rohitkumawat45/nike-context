@@ -4,9 +4,9 @@
   align-items: start;
   width: 100%;
   gap: 2rem;
-  height: 100%;
+  height: 100vh;
   padding: 1rem;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .cart-item {
@@ -68,7 +68,7 @@
 }
 
 .item-card:hover {
-  box-shadow: 0 3px 7px black;
+  box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.2);
   transform: scale(1.02);
 }
 
@@ -132,7 +132,7 @@
 }
 
 .cart-summary {
-  position: sticky;
+  /* position: sticky; */
   padding: 1.5rem;
   background-color: whitesmoke;
   border-radius: 2rem;
@@ -141,7 +141,7 @@
   justify-content: space-between;
   margin: 2rem;
   flex-direction: column;
-  top: 0;
+  /* top: 0; */
 }
 .summary {
   padding-bottom: 1rem;

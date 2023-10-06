@@ -8,7 +8,8 @@ import './cart.css';
 function Cart() {
   const navigate = useNavigate();
   const { addToCart, removeFromCart, removeItem, cartItems, getTotalCartAmount } = useContext(ProductContext);
-
+  
+  console.log(cartItems);
   return (
     <div className='cart'>
       <div className='cart-item'>
