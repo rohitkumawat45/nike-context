@@ -12,7 +12,7 @@ function Cart() {
   return (
     <div className='cart'>
       <div className='cart-item'>
-        <div className='title'>
+        <div className='cart-title'>
           <h1>Your Items</h1>
         </div>
         <div className='item-wrapper'>

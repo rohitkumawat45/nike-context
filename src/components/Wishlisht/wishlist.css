@@ -11,13 +11,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 1rem 5rem;
 }
 
 .wishlist-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin: 0 2rem;
+  gap: 4rem;
+  padding: 0.5rem;
 }
 
 .card img {
@@ -35,26 +36,30 @@
   flex-direction: column;
   transition: all 300ms ease-in-out;
   background-color: whitesmoke;
+  width: 100%;
+}
+
+.allDetails {
+  width: 100%;
 }
 
 .card .details {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .card .details h3 {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
 }
 
 .card .details h4 {
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .card:hover {
@@ -66,13 +71,12 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-right: 2rem;
-  padding: 0 1.5rem;
+  /* margin-right: 2rem; */
+  padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  
 }
 
-.removebtn{
+.removebtn {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -83,10 +87,10 @@
   cursor: pointer;
   background-color: white;
   font-size: 1.2rem;
-  padding: 0.5rem 2rem;
+  padding: 0.1rem 1rem;
   border-radius: 2rem;
   outline: none;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.3s ease-in-out;
 }
 
@@ -99,15 +103,18 @@
 @media screen and (max-width: 500px) {
   .wishlist-card {
     flex-direction: column;
-
+    /* margin: 0 1rem; */
   }
 
   .wishlist-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 1rem 0rem;
     width: 100%;
-    padding: 0 1rem;
+  }
+
+  .wishlist-item {
+    margin: 0;
+    padding: 1rem;
   }
 
   .card img {
@@ -125,20 +132,76 @@
   }
 
   .card .details h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-bottom: 0;
   }
 
   .card .details h4 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .functions {
     margin-right: 0rem;
-    padding: 0 1rem;
+    padding: 0.5rem;
   }
 
-  .removebtn{
+  .removebtn {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .removebtn button {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .wishlist-card {
+    flex-direction: column;
+    padding: 0 3rem;
+  }
+
+  .wishlist-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .wishlist-item {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card .details {
+    justify-content: flex-start;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+  }
+
+  .card .details h3 {
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
+
+  .card .details h4 {
+    font-size: 0.8rem;
+  }
+
+  .functions {
+    margin-right: 0rem;
+    padding: 0.5rem;
+  }
+
+  .removebtn {
     flex-direction: column;
     gap: 0.5rem;
   }

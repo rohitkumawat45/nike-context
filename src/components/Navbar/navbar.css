@@ -1,6 +1,7 @@
 .nav{
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .navbar {
@@ -14,7 +15,7 @@
 
 .logo img {
   background-color: white;
-  width: 7rem;
+  width: 5rem;
 }
 /* 
 .nav-actions{
@@ -28,7 +29,7 @@
 .nav-links a {
   font-size: 1.5rem;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0 1.5rem;
   text-align: center;
   color: black;
@@ -43,22 +44,20 @@
 
 .nav-btn .icons {
   text-decoration: none;
-  font-weight: 500;
   color: black;
 }
 
 .nav-btn button {
   color: black;
   font-size: 1.2rem;
-  margin-left: 1rem;
   background-color: white;
-  padding: 0.5rem 0.7rem;
-  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
   outline: none;
   border: 1px solid black;
   text-align: center;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 450;
   transition: all 0.3s ease-in-out;
 }
 
@@ -107,8 +106,7 @@
     background-color: white;
     width: 100%;
     padding: 0 1rem;
-    background-color: transparent;
-    box-shadow: 0 10px 30px;
+    /* box-shadow: 0 10px 30px; */
     border-radius: 2rem;
   }
 
@@ -117,7 +115,7 @@
     gap: 1rem;
     height: 100%;
     border-radius: 2rem;
-    background-color: whitesmoke;
+    background-color: white;
   }
 
   .ham-links {
@@ -132,7 +130,7 @@
   .ham-links a {
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0.5rem;
     color: black;
   }
@@ -203,15 +201,12 @@
     background-color: white;
     width: 100%;
     padding: 0 1rem;
-    background-color: transparent;
   }
 
   .menu {
     margin: 1rem 0;
     gap: 1rem;
     height: 100%;
-    border-radius: 2rem;
-    background-color: whitesmoke;
   }
 
   .ham-links {
@@ -226,7 +221,7 @@
   .ham-links a {
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0.5rem;
     color: black;
   }
@@ -250,7 +245,7 @@
     border: 1px solid black;
     text-align: center;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.3s ease-in-out;
   }
 

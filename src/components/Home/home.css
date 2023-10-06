@@ -1,4 +1,19 @@
 .home{
-    width: 100%;
-    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 5rem;
+    
+}
+
+@media screen and (max-width: 500px) {
+    .home{
+        margin: 1rem;
+    }
+}
+
+
+@media screen and(min-width:500px) and (max-width: 800px){
+    .home{
+        margin: 0 3rem;
+    }
 }
