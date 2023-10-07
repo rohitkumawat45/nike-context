@@ -36,6 +36,10 @@
   font-weight: 300;
 }
 
+.para:hover{
+opacity: 1;
+}
+
 .top-right {
   display: flex;
   gap: 3rem;
