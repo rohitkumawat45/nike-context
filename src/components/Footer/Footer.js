@@ -1,9 +1,11 @@
 import React from 'react'
 import './footer.css'
 import { BsTwitter, BsFacebook, BsYoutube, BsInstagram } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 import { ImLocation2 } from 'react-icons/im'
 
 function Footer() {
+
     return (
         <div className='footer-card'>
             <div className="top">
@@ -15,7 +17,7 @@ function Footer() {
                         <h3 className='head3'>STUDENT DISCOUNTS</h3>
                     </div>
                     <div className="section2">
-                        <div><h3 className='head3'>GET HELP</h3></div>
+                        <div><a href="/contact"><h3 className='head3'>GET HELP</h3></a></div>
                         <div className='quicks'>
                             <p className='para'>Order Status</p>
                             <p className='para'>Delivery</p>
@@ -59,3 +61,4 @@ function Footer() {
 }
 
 export default Footer
+    

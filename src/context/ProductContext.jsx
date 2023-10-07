@@ -22,7 +22,7 @@ const getDefaultWishlist=()=>{
 function ProductProvider(props) {
     const [cartItems, setCartItems] = useState(getDefaultCart());
     const [wishlistItems, setWishlistItems] = useState(getDefaultWishlist());
-
+    const [search, setSearch] = useState('');
     const getTotalCartAmount = () => {
         let totalAmount = 0;
         for (const item in cartItems) {
@@ -61,12 +61,14 @@ function ProductProvider(props) {
     const contextValue = {
         cartItems,
         wishlistItems,
+        search,
         addToCart,
         removeFromCart,
         removeItem,
         getTotalCartAmount,
         addToWishlist,
         removeWishlist,
+        setSearch,
         checkout,
     };
 
