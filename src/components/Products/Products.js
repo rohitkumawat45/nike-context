@@ -53,7 +53,7 @@ function Products() {
                                     {isItemLiked(product.id) ? (
                                         <PiHeartStraightFill
                                             className="wishlist"
-                                            size={35}
+                                            size={30}
                                             onClick={() => {
                                                 toggleLike(product.id);
                                                 removeWishlist(product.id);
@@ -62,7 +62,7 @@ function Products() {
                                     ) : (
                                         <PiHeartStraight
                                             className="wishlist"
-                                            size={35}
+                                            size={30}
                                             onClick={() => {
                                                 toggleLike(product.id);
                                                 addToWishlist(product.id);
