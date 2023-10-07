@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: start;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wishlist-item {
@@ -23,19 +23,16 @@
 
 .card img {
   width: 100%;
-  border-radius: 2rem;
-  border-bottom: 1px solid gray;
 }
 
 .card {
   background-color: white;
-  border-radius: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
   transition: all 300ms ease-in-out;
-  background-color: whitesmoke;
+  background-color: white;
   width: 100%;
 }
 
@@ -63,7 +60,6 @@
 }
 
 .card:hover {
-  box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.2);
   transform: scale(1.02);
 }
 
@@ -97,7 +93,6 @@
 .removebtn button:hover {
   background-color: black;
   color: white;
-  box-shadow: 2px 2px 5px gray;
 }
 
 @media screen and (max-width: 500px) {
@@ -153,6 +148,8 @@
   .removebtn button {
     padding: 0.2rem 1rem;
     font-size: 1rem;
+    border: 1px solid black;
+    outline: none;
   }
 }
 
