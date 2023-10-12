@@ -11,21 +11,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  height: 5rem;
+  height: 7rem;
 }
 
 .logo img {
   background-color: white;
   width: 5rem;
 }
-/* 
-.nav-actions{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  text-align: center;
-} */
 
 .links {
   display: flex;
@@ -36,6 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60%;
 }
 
 .nav-links a {
@@ -47,19 +40,27 @@
   color: black;
 }
 
-.search-bar {
-  font-size: 1.5rem;
-  width: 50%;
-  gap: 2rem;
+.navsearch-bar {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  border: 0.5px solid gray;
 }
 
-.search-bar input {
+.navsearch-bar input {
   outline: none;
-  border: 1px solid gray;
-  width: 100%;
-  font-size: 1.2rem;
-  border-radius: 2rem;
-  padding: 0.2rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  width: 85%;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.navsearch-icon {
+  width: 15%;
+  padding: 0.5rem;
 }
 
 .nav-btn {
@@ -207,8 +208,6 @@
   .hamicons a:hover {
     color: royalblue;
   }
-
-  
 }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {

@@ -5,6 +5,7 @@ import "./navbar.css"
 import logo from '../../assests/other/logo.png';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import { ProductContext } from '../../context/ProductContext';
+import { BiSearch } from 'react-icons/bi'
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -26,15 +27,17 @@ function Navbar() {
           <div className='logo'>
             <Link to={"/nike-context"}><img src={logo} alt="logo" /></Link>
           </div>
-          {/* <div className='nav-actions'> */}
-
           <div className='links'>
             <ul className='nav-links'>
               <Link to="/categories">Categories</Link>
               <Link to="/whatsNew">New & Featured</Link>
             </ul>
-            <div className="search-bar">
+            <div className="navsearch-bar">
               <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
+
+              <div className='navsearch-icon'>
+              <BiSearch size={25}/>
+              </div>
             </div>
           </div>
 

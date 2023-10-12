@@ -9,12 +9,13 @@ import './clothing.css'
 function Clothing() {
 
   // const{ filter } =useContext(ProductContext);
+  
 
   return (
     <div className='clothing-card'>
       <CategoryBar />
       <div className="clothing-wrapper">
-        <FilterSection/>
+        {/* <FilterSection/> */}
 
         <div className='clothes'>
           {
