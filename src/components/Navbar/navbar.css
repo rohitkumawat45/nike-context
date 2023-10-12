@@ -1,4 +1,4 @@
-.nav{
+.nav {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -27,6 +27,17 @@
   text-align: center;
 } */
 
+.links {
+  display: flex;
+  width: 50%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-links a {
   font-size: 1.5rem;
   text-decoration: none;
@@ -34,6 +45,21 @@
   padding: 0 1.5rem;
   text-align: center;
   color: black;
+}
+
+.search-bar {
+  font-size: 1.5rem;
+  width: 50%;
+  gap: 2rem;
+}
+
+.search-bar input {
+  outline: none;
+  border: 1px solid gray;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 0.2rem 1rem;
 }
 
 .nav-btn {
@@ -90,6 +116,15 @@
     width: 100%;
     padding: 1rem;
     position: relative;
+  }
+
+  .search-bar input {
+    outline: none;
+    border: 1px solid gray;
+    width: 150%;
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding: 0.2rem 1rem;
   }
 
   .logo img {
@@ -172,10 +207,11 @@
   .hamicons a:hover {
     color: royalblue;
   }
+
+  
 }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
-
   .ham-menu {
     display: block;
     z-index: 1;

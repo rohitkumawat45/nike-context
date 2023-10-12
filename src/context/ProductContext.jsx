@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { PRODUCTS } from "../products";
+import { PRODUCTS } from "../utilities/products";
 
 export const ProductContext = createContext(null);
 
@@ -20,6 +20,9 @@ const getDefaultWishlist=()=>{
 }
 
 function ProductProvider(props) {
+
+    const[filter,setFilter]= useState();
+    const[price,setPrice]= useState(0);
     const [cartItems, setCartItems] = useState(getDefaultCart());
     const [wishlistItems, setWishlistItems] = useState(getDefaultWishlist());
     const [search, setSearch] = useState('');
@@ -62,6 +65,8 @@ function ProductProvider(props) {
         cartItems,
         wishlistItems,
         search,
+        filter,
+        price,
         addToCart,
         removeFromCart,
         removeItem,
@@ -69,6 +74,8 @@ function ProductProvider(props) {
         addToWishlist,
         removeWishlist,
         setSearch,
+        setFilter,
+        setPrice,
         checkout,
     };
 

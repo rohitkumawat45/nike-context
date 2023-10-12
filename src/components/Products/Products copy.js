@@ -6,23 +6,35 @@ import "./products.css"
 
 function Products() {
 
-    const { cartItems, addToCart, addToWishlist } = useContext(ProductContext);
+    const { cartItems, addToCart, addToWishlist, removeWishlist } = useContext(ProductContext);
     const cartItemCount = cartItems[PRODUCTS.id];
-    const [search, setSearch] = useState('');
+    const { search } = useContext(ProductContext);
+    const [likedItems, setLikedItems] = useState([]);
+    const isItemLiked = (id) => likedItems.includes(id);
+
+    const toggleLike = (id) => {
+        if (isItemLiked(id)) {
+            // If item is liked, remove it from likedItems
+            setLikedItems(likedItems.filter((itemId) => itemId !== id));
+        } else {
+            // If item is not liked, add it to likedItems
+            setLikedItems([...likedItems, id]);
+        }
+    };
 
     return (
+
         <div className='products'>
 
             <div className="products-wrapper">
                 <div className='title'>
                     <h1>Shop Products</h1>
-                    <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
+                    {/* <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} /> */}
                 </div>
                 <div className="all-products">
                     {
-                        PRODUCTS.filter((product) => {
-                            return search.toLowerCase === '' ? product : product.productName.toLowerCase().includes(search.toLowerCase())
-                        }).map((product) =>
+                        PRODUCTS.filter((product)=> {
+                            return search.toLowerCase === '' ? product : product.productName.toLowerCase().includes(search.toLowerCase())}).map((product) =>
                             <div className='product-card' key={product.id}>
                                 <div>
                                     <img src={product.productImage} alt="" />
@@ -32,21 +44,33 @@ function Products() {
                                         {product.productName}
                                     </h3>
                                     <h4>
-                                        INR {product.price}
+                                        &#x20B9; {product.price}
                                     </h4>
                                 </div>
                                 <div className="btns">
-                                    {/* {
-                                        !toggleHeart ? <PiHeartStraight className="wishlist" size={35} onClick={() => {
-                                            addToWishlist(product.id, toggleHeart);}} /> 
-                                            :
-                                            <PiHeartStraightFill className="wishlist" size={35} onClick={() => {
-                                                removeWishList(product.id, toggleHeart)}} />
-                                    } */}
-                                    <PiHeartStraight className="wishlist" size={35} onClick={() => {
-                                         addToWishlist(product.id) }} />
+                                    {isItemLiked(product.id) ? (
+                                        <PiHeartStraightFill
+                                            className="wishlist"
+                                            size={30}
+                                            onClick={() => {
+                                                toggleLike(product.id);
+                                                removeWishlist(product.id);
+                                            }}
+                                        />
+                                    ) : (
+                                        <PiHeartStraight
+                                            className="wishlist"
+                                            size={30}
+                                            onClick={() => {
+                                                toggleLike(product.id);
+                                                addToWishlist(product.id);
+                                            }}
+                                        />
+                                    )}
+                                    {/* <PiHeartStraight className="wishlist" size={35} onClick={() => {
+                                         addToWishlist(product.id) }} /> */}
                                     <button className="addToCartBttn" onClick={() => addToCart(product.id)}>
-                                        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+                                        Add To Cart {cartItemCount > 0 && <div> ({cartItemCount})</div>}
                                     </button>
                                 </div>
                             </div>

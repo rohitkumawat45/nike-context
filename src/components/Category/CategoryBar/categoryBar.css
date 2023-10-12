@@ -1,0 +1,19 @@
+.category-card{
+    display: grid;
+    align-content: center;
+    margin: 3rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+}
+
+.header a{
+    margin: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+}

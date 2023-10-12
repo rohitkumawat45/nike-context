@@ -1,19 +1,112 @@
-.home{
-    position: relative;
-    overflow: hidden;
-    margin: 1rem 5rem;
-    
+.home {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 5rem;
+}
+
+.banners {
+  width: 100%;
+  padding: 2rem 2rem;
+}
+
+.ad-section1 {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-section1 img {
+  width: 100%;
+}
+
+.ad-section2 {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.ad-heading h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.ad-section2-img {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ad-section2-img img {
+  width: 50%;
+  display: flex;
+  object-fit: contain;
+}
+.ad-section3 {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.ad-section3 img {
+  width: 25%;
+}
+
+.ad-images {
+  transition: all 300ms ease-in-out;
+}
+
+.ad-images:hover {
+  transform: scale(1.02);
 }
 
 @media screen and (max-width: 500px) {
-    .home{
-        margin: 1rem;
-    }
+  .home {
+    margin: 1rem;
+  }
+
+  .banners {
+    padding: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .ad-section1 {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+
+  .ad-section2 {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .ad-heading h3 {
+    font-size: 1.2rem;
+  }
+
+  .ad-section2-img {
+    gap: 0.5rem;
+  }
+
+  .ad-section2-img img {
+    width: 50%;
+    display: flex;
+    object-fit: contain;
+  }
+  .ad-section3 {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
 }
 
-
-@media screen and(min-width:500px) and (max-width: 800px){
-    .home{
-        margin: 0 3rem;
-    }
+@media screen and(min-width:500px) and (max-width: 800px) {
+  .home {
+    margin: 0 3rem;
+  }
 }

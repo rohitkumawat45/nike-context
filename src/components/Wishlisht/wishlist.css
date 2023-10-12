@@ -1,3 +1,7 @@
+.wishlist-title h1{
+  font-weight: 500;
+}
+
 .wishlist-card {
   display: flex;
   justify-content: flex-start;

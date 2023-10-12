@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
-import { PRODUCTS } from '../../products'
+import { PRODUCTS } from '../../utilities/products'
 import { ProductContext } from '../../context/ProductContext'
 import { useNavigate } from 'react-router-dom';
 import './cart.css';
-
 
 function Cart() {
   const navigate = useNavigate();
@@ -27,7 +26,7 @@ function Cart() {
                   <div className="allDetails">
                     <div className="item-details">
                       <h3 className="">{items.productName}</h3>
-                      <h4 className="">INR {items.price}</h4>
+                      <h4 className="">&#x20B9; {items.price}</h4>
                     </div>
                     <div className='func'>
                       <div className="counter">

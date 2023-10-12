@@ -1,0 +1,53 @@
+.clothing-card{
+    display: grid;
+    align-content: center;
+    margin: 3rem;
+}
+.clothing-wrapper{
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.clothes{
+  width: 80%;
+  margin: 1rem;
+}
+
+.cloth-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.cloth-card img {
+  width: 400px;
+}
+
+.cloth-card {
+  display: flex;
+  width: 100%;
+  gap: 5rem;
+  margin: 1rem;
+  background-color: whitesmoke;
+}
+
+.cloth-details {
+  justify-content: center;
+  margin: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cloth-details h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.cloth-details h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+

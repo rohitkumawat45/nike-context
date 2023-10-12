@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { PRODUCTS } from '../../products'
+import { PRODUCTS } from '../../utilities/products'
 import { ProductContext } from '../../context/ProductContext'
 import './wishlist.css'
 
@@ -10,7 +10,7 @@ function Wishlist() {
     return (
         <div className='wishlist-card'>
             <div className='wishlist-item'>
-                <div className='title'>
+                <div className='wishlist-title'>
                     <h1>Your Wishlist</h1>
                 </div>
                 <div className='wishlist-wrapper'>
@@ -24,7 +24,7 @@ function Wishlist() {
                                     <div className="allDetails">
                                         <div className="details">
                                             <h3 className="">{items.productName}</h3>
-                                            <h4 className="">INR {items.price}</h4>
+                                            <h4 className="">&#x20B9; {items.price}</h4>
                                         </div>
                                         <div className='functions'>
                                             <div className='removebtn'>

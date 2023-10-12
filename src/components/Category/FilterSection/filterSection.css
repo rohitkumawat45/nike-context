@@ -1,0 +1,48 @@
+.fliter{
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.filter-options{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    height: 100vh;
+}
+
+.filter-heading h3{
+    font-size: 2rem;
+    font-weight: 400;
+
+}
+
+.filter-sections{
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+gap: 3rem;
+margin: 2rem 0;
+}
+
+.filter-sections label{
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.options{
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-heading{
+    margin: 1rem 0;
+}
+
+.section-heading h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+}

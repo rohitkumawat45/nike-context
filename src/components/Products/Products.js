@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { PRODUCTS } from '../../products';
+import { PRODUCTS } from '../../utilities/products'
 import { PiHeartStraight, PiHeartStraightFill } from 'react-icons/pi'
 import { ProductContext } from '../../context/ProductContext';
 import "./products.css"
@@ -21,8 +21,6 @@ function Products() {
             setLikedItems([...likedItems, id]);
         }
     };
-    
-    console.log(search);
 
     return (
 
@@ -46,7 +44,7 @@ function Products() {
                                         {product.productName}
                                     </h3>
                                     <h4>
-                                        INR {product.price}
+                                        &#x20B9; {product.price}
                                     </h4>
                                 </div>
                                 <div className="btns">

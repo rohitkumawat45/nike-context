@@ -8,7 +8,7 @@ import { ProductContext } from '../../context/ProductContext';
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const { search ,setSearch } = useContext(ProductContext);
+  const { search, setSearch } = useContext(ProductContext);
 
   useEffect(() => {
     if (toggleMenu) {
@@ -27,20 +27,21 @@ function Navbar() {
             <Link to={"/nike-context"}><img src={logo} alt="logo" /></Link>
           </div>
           {/* <div className='nav-actions'> */}
+
           <div className='links'>
             <ul className='nav-links'>
               <Link to="/categories">Categories</Link>
               <Link to="/whatsNew">New & Featured</Link>
             </ul>
-          </div>
-          
-          <div className='nav-btn'>
             <div className="search-bar">
               <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
             </div>
+          </div>
+
+          <div className='nav-btn'>
             <Link className="icons" to="/wishlist"><PiHeartStraight size={35} /></Link>
             <Link className="icons" to="/cart" ><PiBagBold size={35} /></Link>
-            <button>Sign In</button>
+            <button className='sign-in'>Sign In</button>
           </div>
 
           <div className="ham-menu">
