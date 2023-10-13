@@ -1,0 +1,138 @@
+.nav-search-result{
+    display: grid;
+    align-content: center;
+    margin: 3rem;
+}
+.shoes-wrapper{
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.search-result{
+  width: 100%;
+  margin: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.search-result-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-image-result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-result-card img {
+  width: 300px;
+}
+
+.search-result-card {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin: 1rem;
+  background-color: whitesmoke;
+  transition: all 300ms ease-in-out;
+}
+
+.search-result-card:hover{
+  transform: scale(1.02);
+}
+
+.search-result-details {
+  justify-content: center;
+  margin: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.search-result-details h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.search-result-details h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.search-result-details p{
+  font-size: 0.8rem;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+  .nav-search-result {
+    margin: 1rem;
+  }
+
+  .search-result {
+    width: 100%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .search-result-wrapper {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .shoe-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-result-card img {
+    width: 100%;
+    
+  }
+
+  .search-result-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    margin: 0rem;
+  }
+
+  .search-result-details{
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .search-result-details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .search-result-details h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .search-result-details p {
+    display: none;
+  }
+}
+
+

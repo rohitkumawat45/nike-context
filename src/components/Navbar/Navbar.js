@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { PiBagBold, PiHeartStraight } from 'react-icons/pi'
 import "./navbar.css"
 import logo from '../../assests/other/logo.png';
@@ -11,6 +11,7 @@ import Products from '../Products/Products';
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { search, setSearch } = useContext(ProductContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (toggleMenu) {
@@ -20,12 +21,6 @@ function Navbar() {
       document.body.style.overflow = "scroll";
     }
   }, [toggleMenu]);
-
-  const searchResult =()=>{
-    return <div>
-      <Products />
-    </div> 
-  }
 
   return (
     <div className='nav'>
@@ -42,7 +37,7 @@ function Navbar() {
             <div className="navsearch-bar">
               <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
               <div className='navsearch-icon'>
-                <BiSearch size={25} onClick={() => { return <Products /> }} />
+                <BiSearch size={25} onClick={() => { navigate("/searchResults"); }} />
               </div>
             </div>
           </div>

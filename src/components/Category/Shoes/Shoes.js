@@ -19,7 +19,7 @@ function Shoes() {
               return item.category.includes("shoes")
             }).map((pro) => {
               return <div className='shoe-wrapper'>
-                <div className='cloth-card' key={pro.id} onClick={() => navigate("/products", { state: { id: pro.id } })}>
+                <div className='shoe-card' key={pro.id} onClick={() => navigate("/products", { state: { id: pro.id } })}>
                   <div>
                     <img src={pro.productImage} alt="" />
                   </div>
