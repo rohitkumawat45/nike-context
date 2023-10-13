@@ -1,11 +1,16 @@
 .result-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  
+  /* flex-wrap: wrap; */
 }
 
 .result-card img {
   width: 400px;
+}
+
+.image-result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .result-card {
@@ -14,6 +19,11 @@
   gap: 5rem;
   margin: 1rem;
   background-color: whitesmoke;
+  transition: all 300ms ease-in-out;
+}
+
+.result-card:hover{
+  transform: scale(1.02);
 }
 
 .result-details {
@@ -33,4 +43,51 @@
 .result-details h4 {
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+@media screen and (max-width: 550px) {
+  .result {
+    width: 100%;
+  }
+
+  .result-wrapper {
+    width: 100%;
+  }
+
+  .result-card img {
+
+    width: 100px;
+  }
+
+  .result-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    margin: 0.2rem 0;
+    background-color: whitesmoke;
+  }
+
+  .result-details {
+    justify-content: center;
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .result-details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .result-details h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .result-details p {
+    display: none;
+  }
 }

@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import { PRODUCTS } from '../../utilities/products'
 import { ProductContext } from '../../context/ProductContext';
 import './filterResults.css'
+import { useNavigate } from 'react-router-dom';
 
 function FilterResult(props) {
-
+    const navigate = useNavigate();
     const { filter } = useContext(ProductContext);
 
     return (
@@ -16,8 +17,8 @@ function FilterResult(props) {
         
                     }).map((pro) => {
                         return <div className='result-wrapper'>
-                            <div className='result-card' key={pro.id} >
-                                <div>
+                            <div className='result-card' key={pro.id} onClick={() => navigate("/products", { state: { id: pro.id } })}>
+                                <div className='image-result'>
                                     <img src={pro.productImage} alt="" />
                                 </div>
                                 <div className="result-details">

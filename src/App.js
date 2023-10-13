@@ -11,6 +11,7 @@ import Category from './components/Category/Category'
 import Gear from './components/Category/Gear/Gear'
 import Clothing from './components/Category/Clothing/Clothing'
 import Shoes from './components/Category/Shoes/Shoes'
+import Products from './components/Products/Products'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path='/shoes' element={<Shoes />} />
               <Route path='/clothing' element={<Clothing />} />
               <Route path='/gear' element={<Gear />} />
+              <Route path='/products' element={<Products />} />
             </Routes>
             <Footer/>
           </Router>

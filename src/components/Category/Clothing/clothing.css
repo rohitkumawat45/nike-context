@@ -1,23 +1,24 @@
-.clothing-card{
-    display: grid;
-    align-content: center;
-    margin: 3rem;
+.clothing-card {
+  display: grid;
+  align-content: center;
+  margin: 3rem;
 }
-.clothing-wrapper{
-    display: flex;
-    width: 100%;
-    min-height: 80vh;
+.clothing-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
 }
 
-.clothes{
-  width: 80%;
+.clothes {
+  width: 100%;
   margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .cloth-wrapper {
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .cloth-card img {
@@ -30,6 +31,11 @@
   gap: 5rem;
   margin: 1rem;
   background-color: whitesmoke;
+  transition: all 300ms ease-in-out;
+}
+
+.cloth-card:hover{
+  transform: scale(1.02);
 }
 
 .cloth-details {
@@ -51,3 +57,73 @@
   font-weight: 400;
 }
 
+.cloth-details p{
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+  .clothing-card {
+    margin: 1rem;
+  }
+
+  .clothes {
+    width: 100%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .cloth-wrapper {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .cloth-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cloth-card img {
+    width: 100%;
+    
+  }
+
+  .cloth-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .cloth-details {
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .cloth-details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .cloth-details h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .cloth-details p {
+    display: none;
+  }
+}

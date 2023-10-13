@@ -1,19 +1,17 @@
 import React from 'react'
-// import { useContext } from 'react'
 import CategoryBar from '../CategoryBar/CategoryBar'
 import './shoes.css'
 import { PRODUCTS } from '../../../utilities/products'
-import FilterSection from '../FilterSection/FilterSection'
-// import { ProductContext } from '../../../context/ProductContext'
+import { useNavigate } from 'react-router-dom'
 
 function Shoes() {
-  // const { filter } = useContext(ProductContext);
+
+  const navigate = useNavigate();
 
   return (
     <div className='shoes-card'>
       <CategoryBar />
       <div className="shoes-wrapper">
-        <FilterSection />
 
         <div className='shoes'>
           {
@@ -21,7 +19,7 @@ function Shoes() {
               return item.category.includes("shoes")
             }).map((pro) => {
               return <div className='shoe-wrapper'>
-                <div className='cloth-card' key={pro.id} >
+                <div className='cloth-card' key={pro.id} onClick={() => navigate("/products", { state: { id: pro.id } })}>
                   <div>
                     <img src={pro.productImage} alt="" />
                   </div>

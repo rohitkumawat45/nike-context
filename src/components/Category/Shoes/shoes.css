@@ -10,8 +10,10 @@
 }
 
 .shoes{
-  width: 80%;
+  width: 100%;
   margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .shoe-wrapper {
@@ -30,6 +32,11 @@
   gap: 5rem;
   margin: 1rem;
   background-color: whitesmoke;
+  transition: all 300ms ease-in-out;
+}
+
+.shoe-card:hover{
+  transform: scale(1.02);
 }
 
 .shoe-details {
@@ -50,4 +57,76 @@
   font-size: 1.2rem;
   font-weight: 400;
 }
+
+.shoe-details p{
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+  .shoes-card {
+    margin: 1rem;
+  }
+
+  .shoes {
+    width: 100%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .shoe-wrapper {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .shoe-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shoe-card img {
+    width: 100%;
+    
+  }
+
+  .shoe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    margin: 0rem;
+  }
+
+  .shoe-details {
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .shoe-details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .shoe-details h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .shoe-details p {
+    display: none;
+  }
+}
+
 

@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { PRODUCTS } from "../utilities/products";
+import { useParams } from "react-router-dom";
 
 export const ProductContext = createContext(null);
 
@@ -20,9 +21,11 @@ const getDefaultWishlist=()=>{
 }
 
 function ProductProvider(props) {
+    const params = useParams();
+    const { itemId } = params;
+
 
     const[filter,setFilter]= useState();
-    const[price,setPrice]= useState(0);
     const [cartItems, setCartItems] = useState(getDefaultCart());
     const [wishlistItems, setWishlistItems] = useState(getDefaultWishlist());
     const [search, setSearch] = useState('');
@@ -66,7 +69,6 @@ function ProductProvider(props) {
         wishlistItems,
         search,
         filter,
-        price,
         addToCart,
         removeFromCart,
         removeItem,
@@ -75,8 +77,8 @@ function ProductProvider(props) {
         removeWishlist,
         setSearch,
         setFilter,
-        setPrice,
         checkout,
+        params,
     };
 
     return (

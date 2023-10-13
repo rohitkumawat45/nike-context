@@ -3,14 +3,18 @@ import { PRODUCTS } from '../../utilities/products'
 import { PiHeartStraight, PiHeartStraightFill } from 'react-icons/pi'
 import { ProductContext } from '../../context/ProductContext';
 import "./products.css"
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 function Products() {
 
-    const { cartItems, addToCart, addToWishlist, removeWishlist } = useContext(ProductContext);
+    const { cartItems, addToCart, addToWishlist, removeWishlist} = useContext(ProductContext);
     const cartItemCount = cartItems[PRODUCTS.id];
     const { search } = useContext(ProductContext);
     const [likedItems, setLikedItems] = useState([]);
     const isItemLiked = (id) => likedItems.includes(id);
+    // useNavigate();
+
+    const itemId = useLocation();
 
     const toggleLike = (id) => {
         if (isItemLiked(id)) {
@@ -22,6 +26,8 @@ function Products() {
         }
     };
 
+    console.log(itemId);
+
     return (
 
         <div className='products'>
@@ -29,13 +35,15 @@ function Products() {
             <div className="products-wrapper">
                 <div className='title'>
                     <h1>Shop Products</h1>
-                    {/* <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} /> */}
                 </div>
                 <div className="all-products">
                     {
                         PRODUCTS.filter((product)=> {
-                            return search.toLowerCase === '' ? product : product.productName.toLowerCase().includes(search.toLowerCase())}).map((product) =>
-                            <div className='product-card' key={product.id}>
+                            if (product.id === itemId.state.id){
+                                return product.id
+                            }
+                            }).map((product) =>
+                                <div className='product-card' key={product.id} >
                                 <div>
                                     <img src={product.productImage} alt="" />
                                 </div>

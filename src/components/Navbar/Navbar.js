@@ -6,6 +6,7 @@ import logo from '../../assests/other/logo.png';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import { ProductContext } from '../../context/ProductContext';
 import { BiSearch } from 'react-icons/bi'
+import Products from '../Products/Products';
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -19,6 +20,12 @@ function Navbar() {
       document.body.style.overflow = "scroll";
     }
   }, [toggleMenu]);
+
+  const searchResult =()=>{
+    return <div>
+      <Products />
+    </div> 
+  }
 
   return (
     <div className='nav'>
@@ -34,9 +41,8 @@ function Navbar() {
             </ul>
             <div className="navsearch-bar">
               <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
-
               <div className='navsearch-icon'>
-              <BiSearch size={25}/>
+                <BiSearch size={25} onClick={() => { return <Products /> }} />
               </div>
             </div>
           </div>

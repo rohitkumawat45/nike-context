@@ -1,30 +1,26 @@
-// import { useContext } from 'react'
 import React from 'react'
 import CategoryBar from '../CategoryBar/CategoryBar'
 import { PRODUCTS } from '../../../utilities/products'
-import FilterSection from '../FilterSection/FilterSection'
-// import { ProductContext } from '../../../context/ProductContext'
 import './clothing.css'
+import { useNavigate } from 'react-router-dom';
 
 function Clothing() {
 
-  // const{ filter } =useContext(ProductContext);
-  
+  const navigate = useNavigate();
 
   return (
     <div className='clothing-card'>
       <CategoryBar />
       <div className="clothing-wrapper">
-        {/* <FilterSection/> */}
-
+       
         <div className='clothes'>
           {
             PRODUCTS.filter((item) => {
               return item.category.includes("clothing") ;
             }).map((pro) => {
               return <div className='cloth-wrapper'>
-                <div className='cloth-card' key={pro.id} >
-                  <div>
+                <div className='cloth-card' key={pro.id} onClick={() => navigate("/products", { state: { id: pro.id } })}>
+                  <div className='cloth-image'>
                     <img src={pro.productImage} alt="" />
                   </div>
                   <div className="cloth-details">

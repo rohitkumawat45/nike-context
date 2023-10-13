@@ -12,7 +12,9 @@
 
 .gears{
   margin: 1rem;
-  width: 80%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .gear-wrapper {
@@ -30,6 +32,11 @@
   gap: 5rem;
   margin: 1rem;
   background-color: whitesmoke;
+  transition: all 300ms ease-in-out;
+}
+
+.gear-card:hover{
+  transform: scale(1.02);
 }
 
 .gear-details {
@@ -50,4 +57,75 @@
   font-size: 1.2rem;
   font-weight: 400;
 }
+
+.gear-details p{
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+  .gears-card {
+    margin: 1rem;
+  }
+
+  .gears {
+    width: 100%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .gear-wrapper {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .gear-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gear-card img {
+    width: 100%;
+  }
+
+  .gear-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .gear-details {
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .gear-details h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .gear-details h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .gear-details p {
+    display: none;
+  }
+}
+
 

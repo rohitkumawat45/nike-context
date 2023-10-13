@@ -1,27 +1,25 @@
 import React from 'react'
-// import { useContext } from 'react'
 import CategoryBar from '../CategoryBar/CategoryBar'
 import './gear.css'
 import { PRODUCTS } from '../../../utilities/products'
-import FilterSection from '../FilterSection/FilterSection'
-// import { ProductContext } from '../../../context/ProductContext'
+import { useNavigate } from 'react-router-dom';
 
 function Gear() {
-  // const { filter } = useContext(ProductContext);
+
+  const navigate = useNavigate();
 
   return (
     <div className='gears-card'>
       <CategoryBar />
       <div className="gears-wrapper">
-        <FilterSection />
-
+        
         <div className='gears'>
           {
             PRODUCTS.filter((item) => {
               return item.category.includes("gear");
             }).map((pro) => {
               return <div className='gear-wrapper'>
-                <div className='gear-card' key={pro.id} >
+                <div className='gear-card' key={pro.id} onClick={() => navigate("/products", { state: { id: pro.id } })}>
                   <div>
                     <img src={pro.productImage} alt="" />
                   </div>

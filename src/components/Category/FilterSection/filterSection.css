@@ -1,48 +1,119 @@
-.fliter{
+.fliter {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+.filter-heading h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.filter-sections {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.filter-sections label {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.options {
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading {
+  margin: 1rem 0;
+}
+
+.section-heading h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.filter-mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .fliter {
+    display: flex;
+    min-height: 0;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .filter-options {
     display: flex;
     width: 100%;
-    min-height: 80vh;
-}
-
-.filter-options{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin: 2rem;
-    padding: 1rem 2rem;
-    background-color: whitesmoke;
-    height: 100vh;
-}
-
-.filter-heading h3{
-    font-size: 2rem;
-    font-weight: 400;
-
-}
-
-.filter-sections{
-display: flex;
-align-items: flex-start;
-flex-direction: column;
-gap: 3rem;
-margin: 2rem 0;
-}
-
-.filter-sections label{
-    font-size: 1.2rem;
+    margin: 0.5rem 0;
     padding: 1rem;
-}
+    background-color: whitesmoke;
+    height: 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
 
-.options{
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
+  .filter-sections {
+    display: none;
+  }
 
-.section-heading{
-    margin: 1rem 0;
-}
+  .filter-heading h3 {
+    font-size: 1.2rem;
+  }
 
-.section-heading h3{
-    font-size: 1.4rem;
-    font-weight: 500;
+  .filter-mobile-menu {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .filter-mobile-sections {
+    background-color: whitesmoke;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .mobile-fliterByBrand {
+    margin: 0.5rem;
+  }
+
+  .mobile-section-heading h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .mobile-options {
+    padding: 0.2rem 1rem;
+  }
+
+  .mobile-options label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.5rem;
+  }
+
+  .mobile-filterByPrice {
+     margin: 0.5rem;
+  }
 }

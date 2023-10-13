@@ -1,9 +1,13 @@
 import './productSection.css';
-import React from 'react'
+import React, { useContext } from 'react'
 import { PRODUCTS } from '../../utilities/products'
 import Carousel from '../Carousel/Carousel';
+import { useNavigate } from 'react-router-dom';
 
 function ProductSection({title, category,data}) {
+
+    const navigate = useNavigate();
+
     return (
         <div className='prodSection'>
 
@@ -16,7 +20,7 @@ function ProductSection({title, category,data}) {
                         PRODUCTS.filter((prod) => {
                             return prod.category.includes(category)
                         }).map((prod) => {
-                            return <div className='prodSection-card' key={prod.id} >
+                            return <div className='prodSection-card' key={prod.id} onClick={() =>navigate("/products", {state :{id : prod.id}})} >
                                 <div>
                                     <img src={prod.productImage} alt="" />
                                 </div>

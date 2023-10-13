@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './category.css'
 import FilterResult from './FilterResult';
 import CategoryBar from './CategoryBar/CategoryBar';
