@@ -1,5 +1,6 @@
 .wishlist-title h1{
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .wishlist-card {
@@ -100,6 +101,11 @@
 }
 
 @media screen and (max-width: 500px) {
+
+  .wishlist-title h1{
+    font-size: 1.2rem;
+  }
+
   .wishlist-card {
     flex-direction: column;
     /* margin: 0 1rem; */

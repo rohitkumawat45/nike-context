@@ -1,5 +1,5 @@
 import './productSection.css';
-import React, { useContext } from 'react'
+import React from 'react'
 import { PRODUCTS } from '../../utilities/products'
 import Carousel from '../Carousel/Carousel';
 import { useNavigate } from 'react-router-dom';

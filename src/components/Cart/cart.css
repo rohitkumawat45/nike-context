@@ -134,6 +134,7 @@
 .summary {
   padding-bottom: 1rem;
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .details {
@@ -264,6 +265,7 @@
   }
 
   .cart-title h1{
+    font-size: 1.5rem;
     margin: 0 1rem;
   }
 
@@ -335,6 +337,14 @@
     width: 100%;
     margin: 0rem;
     /* bottom: 0; */
+  }
+
+  .summary{
+    font-size: 1rem;
+  }
+
+  .total{
+    font-size: 1rem;
   }
 
   .details .funbtn {
