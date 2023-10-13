@@ -48,15 +48,15 @@ function Navbar() {
           </div>
 
           <div className='nav-btn'>
-            <Link className="icons" to="/wishlist"><PiHeartStraight size={35} /></Link>
-            <Link className="icons" to="/cart" ><PiBagBold size={35} /></Link>
+            <Link className="icons" to="/wishlist"><PiHeartStraight size={25} /></Link>
+            <Link className="icons" to="/cart" ><PiBagBold size={25} /></Link>
             <button className='sign-in'>Sign In</button>
           </div>
 
           <div className="ham-menu">
             {toggleMenu
-              ? <RiCloseLine size={35} onClick={() => setToggleMenu(false)} />
-              : <RiMenu3Line size={35} onClick={() => setToggleMenu(true)} />
+              ? <RiCloseLine size={30} onClick={() => setToggleMenu(false)} />
+              : <RiMenu3Line size={30} onClick={() => setToggleMenu(true)} />
             }
             {
               toggleMenu && (

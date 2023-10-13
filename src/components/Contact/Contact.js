@@ -7,6 +7,7 @@ import store from './images/store.png'
 import { BiSearch } from 'react-icons/bi'
 
 function Contact() {
+    
     return (
         <div className='contact'>
             <div className='head'>

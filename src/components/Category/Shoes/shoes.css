@@ -11,7 +11,7 @@
 
 .shoes{
   width: 100%;
-  margin: 1rem;
+  margin: 0.5rem;
   display: grid;
   grid-template-columns: repeat(2,1fr);
 }
@@ -19,17 +19,22 @@
 .shoe-wrapper {
   display: flex;
   flex-wrap: wrap;
-  
+}
+
+.shoe-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shoe-card img {
-  width: 400px;
+  width: 300px;
 }
 
 .shoe-card {
   display: flex;
   width: 100%;
-  gap: 5rem;
+  gap: 1rem;
   margin: 1rem;
   background-color: whitesmoke;
   transition: all 300ms ease-in-out;
@@ -49,16 +54,17 @@
 }
 
 .shoe-details h3 {
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.shoe-details h4 {
   font-size: 1.2rem;
   font-weight: 400;
 }
 
+.shoe-details h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .shoe-details p{
+  font-size: 0.8rem;
   padding-right: 1rem;
 }
 

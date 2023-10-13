@@ -1,6 +1,7 @@
 .wishlist-title h1{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  margin: 1rem 3rem;
 }
 
 .wishlist-card {
@@ -24,6 +25,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 4rem;
   padding: 0.5rem;
+  margin: 1rem 3rem;
 }
 
 .card img {
@@ -54,14 +56,14 @@
 }
 
 .card .details h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 400;
   padding-bottom: 0.5rem;
 }
 
 .card .details h4 {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .card:hover {
@@ -79,7 +81,6 @@
 
 .removebtn {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
 }
@@ -87,8 +88,8 @@
 .removebtn button {
   cursor: pointer;
   background-color: white;
-  font-size: 1.2rem;
-  padding: 0.1rem 1rem;
+  font-size: 1rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 2rem;
   outline: none;
   font-weight: 400;

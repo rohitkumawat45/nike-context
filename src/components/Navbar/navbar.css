@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  height: 7rem;
+  height: 5rem;
 }
 
 .logo img {
@@ -32,7 +32,7 @@
 }
 
 .nav-links a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   font-weight: 500;
   padding: 0 1.5rem;
@@ -41,6 +41,7 @@
 }
 
 .navsearch-bar {
+  height: 2rem;
   display: flex;
   width: 40%;
   justify-content: center;
@@ -51,11 +52,13 @@
 
 .navsearch-bar input {
   outline: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: none;
+  height: 100%;
   width: 85%;
   border-radius: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
+  background-color: white;
 }
 
 .navsearch-icon {
@@ -71,18 +74,24 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-btn .icons {
   text-decoration: none;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-btn button {
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background-color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
   border-radius: 2rem;
   outline: none;
   border: 1px solid black;

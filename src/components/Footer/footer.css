@@ -1,7 +1,7 @@
 .footer-card {
   background-color: black;
   color: white;
-  padding: 3rem 5rem;
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,13 +28,14 @@
 }
 
  .head3 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   line-height: 2;
   color: whitesmoke;
 }
 
 .para {
+  font-size: 0.7rem;
   opacity: 0.5;
   line-height: 2.5;
   font-weight: 300;

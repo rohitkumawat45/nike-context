@@ -11,7 +11,7 @@
 
 .clothes {
   width: 100%;
-  margin: 1rem;
+  margin: 0.5rem;
   display: grid;
   grid-template-columns: repeat(2,1fr);
 }
@@ -21,14 +21,20 @@
   flex-wrap: wrap;
 }
 
+.cloth-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cloth-card img {
-  width: 400px;
+  width: 300px;
 }
 
 .cloth-card {
   display: flex;
   width: 100%;
-  gap: 5rem;
+  gap: 1rem;
   margin: 1rem;
   background-color: whitesmoke;
   transition: all 300ms ease-in-out;
@@ -48,16 +54,17 @@
 }
 
 .cloth-details h3 {
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.cloth-details h4 {
   font-size: 1.2rem;
   font-weight: 400;
 }
 
+.cloth-details h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .cloth-details p{
+  font-size: 0.8rem;
   padding-right: 1rem;
 }
 

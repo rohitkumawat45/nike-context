@@ -39,12 +39,12 @@
 }
 
 .head-product h3 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
 .head-product h4 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
 }
 
@@ -53,12 +53,12 @@
 }
 
 .offers h5 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 .offers ul {
-  font-size: 1.2rem;
+  font-size: 1rem;
   list-style: square;
   line-height: 2;
 }
@@ -76,7 +76,7 @@
 
 .description p {
   width: 60%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 0.8;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .btns button {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 0rem 5rem;
   border-radius: 3rem;
   background-color: white;
@@ -115,7 +115,7 @@
 }
 
 .reviews h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   padding: 1rem;
   background-color: whitesmoke;
@@ -129,13 +129,14 @@
 }
 
 .review-card h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   margin: 1rem;
 }
 
 .review-card p {
   margin: 1rem;
+  opacity: 0.8;
 }
 
 .review {

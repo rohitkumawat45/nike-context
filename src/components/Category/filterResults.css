@@ -1,10 +1,9 @@
 .result-wrapper {
   display: flex;
-  /* flex-wrap: wrap; */
 }
 
 .result-card img {
-  width: 400px;
+  width: 300px;
 }
 
 .image-result{
@@ -16,7 +15,7 @@
 .result-card {
   display: flex;
   width: 100%;
-  gap: 5rem;
+  gap: 4rem;
   margin: 1rem;
   background-color: whitesmoke;
   transition: all 300ms ease-in-out;
@@ -36,12 +35,12 @@
 }
 
 .result-details h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 .result-details h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 

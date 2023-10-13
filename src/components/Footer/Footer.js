@@ -17,7 +17,12 @@ function Footer() {
                         <h3 className='head3'>STUDENT DISCOUNTS</h3>
                     </div>
                     <div className="section2">
-                        <div><a href="/contact"><h3 className='head3'>GET HELP</h3></a></div>
+                        <div>
+                        <Link to={"/contact"}>
+                                <h3 className='head3'>GET HELP</h3>
+                        </Link>
+                       
+                        </div>
                         <div className='quicks'>
                             <p className='para'>Order Status</p>
                             <p className='para'>Delivery</p>
