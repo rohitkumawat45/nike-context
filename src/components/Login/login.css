@@ -1,0 +1,134 @@
+.login-card {
+  margin: 3rem 10rem;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 2rem;
+}
+
+.side-banner {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-banner img {
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.page-head {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+.email {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email label {
+  font-size: 1.2rem;
+}
+
+.email input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid gray;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.password label {
+  font-size: 1.2rem;
+}
+
+.password input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid gray;
+}
+
+.termsnCon {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.termsnCon label {
+  font-size: 0.7rem;
+}
+
+.termsnCon input {
+    color: red;
+}
+
+.login-form button{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+    transition: all 200ms ease-in-out;
+}
+
+.login-form button:hover{
+    color: white;
+    background-color: black;
+}
+
+@media screen and (max-width:550px) {
+    .login-card{
+        margin: 1rem;
+        flex-direction: column;
+    }
+
+    .side-banner{
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .login-form{
+        border: none;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .page-head{
+        margin: 1rem;
+    }
+}
