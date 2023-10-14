@@ -6,7 +6,6 @@ import logo from '../../assests/other/logo.png';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import { ProductContext } from '../../context/ProductContext';
 import { BiSearch } from 'react-icons/bi'
-import Products from '../Products/Products';
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
