@@ -45,7 +45,7 @@ function Navbar() {
           <div className='nav-btn'>
             <Link className="icons" to="/wishlist"><PiHeartStraight size={25} /></Link>
             <Link className="icons" to="/cart" ><PiBagBold size={25} /></Link>
-            <button className='sign-in'>Sign In</button>
+            <button className='sign-in' onClick={()=> navigate("/login")}>Sign In</button>
           </div>
 
           <div className="ham-menu">
@@ -66,7 +66,7 @@ function Navbar() {
                     <div className='toggle-menuBtns'>
                       <Link className="hamicons" to="/wishlist"><PiHeartStraight size={35} /></Link>
                       <Link className="hamicons" to="/cart" ><PiBagBold size={35} /></Link>
-                      <button>Sign In</button>
+                      <button onClick={() => navigate("/login")}>Sign In</button>
                     </div>
                   </div>
                 </div>

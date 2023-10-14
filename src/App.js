@@ -13,6 +13,7 @@ import Clothing from './components/Category/Clothing/Clothing'
 import Shoes from './components/Category/Shoes/Shoes'
 import Products from './components/Products/Products'
 import SearchResult from './components/SearchResult/SearchResult'
+import Login from './components/Login/Login'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route path='/gear' element={<Gear />} />
               <Route path='/products' element={<Products />} />
               <Route path='/searchResults' element={<SearchResult />} />
+              <Route path='/login' element={<Login />} />
             </Routes>
             <Footer/>
           </Router>
