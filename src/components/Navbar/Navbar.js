@@ -34,9 +34,9 @@ function Navbar() {
               <Link to="/whatsNew">New & Featured</Link>
             </ul>
             <div className="navsearch-bar">
-              <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} value={search} />
+              <input className='searchFilter' type="text" placeholder='Search Products' onChange={(e) => { setSearch(e.target.value) }} onClick={() => navigate("/searchResults")} value={search} />
               <div className='navsearch-icon'>
-                <BiSearch size={25} onClick={() => { navigate("/searchResults"); }} />
+                <BiSearch size={25} />
               </div>
             </div>
           </div>
