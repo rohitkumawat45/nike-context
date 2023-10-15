@@ -105,17 +105,19 @@
 
   .wishlist-title h1{
     font-size: 1.2rem;
+    margin: 1rem 0.5rem;
   }
 
   .wishlist-card {
     flex-direction: column;
-    /* margin: 0 1rem; */
+    margin: 0;
   }
 
   .wishlist-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     width: 100%;
+    margin: 0;
   }
 
   .wishlist-item {

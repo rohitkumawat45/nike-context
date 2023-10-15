@@ -15,8 +15,13 @@
 
 @media screen and (max-width:550px){
 
+    .header{
+        margin: 0rem;
+    }
+
     .header a{
         font-size: 1rem;
         font-weight: 400;
+        margin: 1rem;
     }
 }
