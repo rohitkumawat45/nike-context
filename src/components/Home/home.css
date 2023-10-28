@@ -6,8 +6,10 @@
 
 .banners {
   width: 100%;
-  padding: 2rem;
-  
+  padding: 0 2rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ad-section1 {
@@ -16,6 +18,10 @@
   gap: 2rem;
   align-items: center;
   justify-content: center;
+}
+
+.ads{
+  margin: 1rem 0;
 }
 
 .ad-section1 img {
@@ -74,6 +80,10 @@
     padding: 0rem;
     margin-bottom: 1rem;
   }
+
+  .ads{
+  margin: 1rem 0;
+}
 
   .ad-section1 {
     padding: 1rem 0.5rem;

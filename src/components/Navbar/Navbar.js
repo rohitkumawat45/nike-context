@@ -6,9 +6,11 @@ import logo from '../../assests/other/logo.png';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import { ProductContext } from '../../context/ProductContext';
 import { BiSearch } from 'react-icons/bi'
+import CategoryDropDown from '../Category/CategoryDropDown/CategoryDropDown';
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const[dropDown , setDropDown] = useState(false);
   const { search, setSearch } = useContext(ProductContext);
   const navigate = useNavigate();
 
@@ -21,6 +23,10 @@ function Navbar() {
     }
   }, [toggleMenu]);
 
+  useEffect(()=>{
+    setTimeout(()=> setDropDown(false), 10000)
+  },[dropDown])
+
   return (
     <div className='nav'>
       <div>
@@ -30,7 +36,16 @@ function Navbar() {
           </div>
           <div className='links'>
             <ul className='nav-links'>
-              <Link to="/categories">Categories</Link>
+              <div onClick ={()=> setDropDown(true)}>
+                <h3 className='category'>Categories</h3>
+                {
+                  dropDown && (
+                    <div className="drop-menu">
+                      <CategoryDropDown />
+                    </div>
+                  )
+                }
+              </div>
               <Link to="/whatsNew">New & Featured</Link>
             </ul>
             <div className="navsearch-bar">

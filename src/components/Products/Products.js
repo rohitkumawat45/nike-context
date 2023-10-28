@@ -42,6 +42,25 @@ function Products() {
                                 <div className="product-summary">
                                     <div className='image-pro'>
                                         <img src={product.productImage} alt="" />
+                                        <div className="wishlist-btn">
+                                            {isItemLiked(product.id) ? (
+                                                <PiHeartStraightFill
+                                                    className="wishlist" size={35}
+                                                    onClick={() => {
+                                                        toggleLike(product.id);
+                                                        removeWishlist(product.id);
+                                                    }}
+                                                />
+                                            ) : (
+                                                <PiHeartStraight
+                                                    className="wishlist" size={35}
+                                                    onClick={() => {
+                                                        toggleLike(product.id);
+                                                        addToWishlist(product.id);
+                                                    }}
+                                                />
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="productinfo">
                                         <div className="product-details">
@@ -64,14 +83,8 @@ function Products() {
                                                 </ul>
                                             </div>
 
-                                            <div className="description">
-                                                <h4>Product Description</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sunt reiciendis atque libero, corporis quae aliquam repellat repellendus eos aut, veniam a eius voluptates officiis, fugiat dolor laboriosam architecto mollitia modi magnam ea ut dicta? Unde, enim, error recusandae fuga, reprehenderit harum dignissimos esse ipsum cum obcaecati iusto perferendis necessitatibus?</p>
-                                            </div>
-
-                                        </div>
-                                        <div className="btns">
-                                            <div className="wishlist-btn">
+                                            <div className="btns">
+                                                {/* <div className="wishlist-btn">
                                                 {isItemLiked(product.id) ? (
                                                     <PiHeartStraightFill
                                                         className="wishlist" size={45}
@@ -89,11 +102,20 @@ function Products() {
                                                         }}
                                                     />
                                                 )}
+                                            </div> */}
+                                                <button className="addToCartBttn" onClick={() => addToCart(product.id)}>
+                                                    Add To Cart {cartItemCount > 0 && <div> ({cartItemCount})</div>}
+                                                </button>
+                                                <button className="addToCartBttn"> Buy Now</button>
                                             </div>
-                                            <button className="addToCartBttn" onClick={() => addToCart(product.id)}>
-                                                Add To Cart {cartItemCount > 0 && <div> ({cartItemCount})</div>}
-                                            </button>
+
+                                            <div className="description">
+                                                <h4>Product Description</h4>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sunt reiciendis atque libero, corporis quae aliquam repellat repellendus eos aut, veniam a eius voluptates officiis, fugiat dolor laboriosam architecto mollitia modi magnam ea ut dicta? Unde, enim, error recusandae fuga, reprehenderit harum dignissimos esse ipsum cum obcaecati iusto perferendis necessitatibus?</p>
+                                            </div>
+
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 <div className="reviews">

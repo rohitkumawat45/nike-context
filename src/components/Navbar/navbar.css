@@ -12,6 +12,7 @@
   align-items: center;
   padding: 2rem;
   height: 5rem;
+  position: relative;
 }
 
 .logo img {
@@ -59,6 +60,21 @@
   border-radius: 1.5rem;
   padding: 0.5rem 0.7rem;
   background-color: white;
+}
+
+.nav-links h3{
+  font-weight: 500;
+}
+
+.drop-menu{
+  position: absolute;
+  top: 2.5rem;
+}
+
+.drop-menu a{
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 .navsearch-icon {
@@ -157,8 +173,21 @@
     display: none;
   }
 
+  .category h3{
+    position: relative;
+    font-weight: 300;
+    border: 1px solid black;
+  }
+
+  .drop-menu{
+    position: absolute;
+    top: 0;
+    background-color: black;
+  }
+
   .toggleMenu {
     position: absolute;
+    top: 0;
     right: 0;
     background-color: white;
     width: 100%;

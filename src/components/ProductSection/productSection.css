@@ -14,7 +14,6 @@
   width: 100%;
   gap: 2rem;
   padding-right: 2rem;
-  
 }
 
 .product-section {
@@ -28,7 +27,7 @@
 }
 
 .carousel-wrapper {
-  width: 30%;
+  width: 27%;
 }
 
 .product-section::-webkit-scrollbar {

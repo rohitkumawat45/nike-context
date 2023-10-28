@@ -6,7 +6,7 @@ import { slides } from '../../utilities/imageSlides'
 import { shoeSlides } from '../../utilities/imageSlides'
 import { clothSlides } from '../../utilities/imageSlides'
 import { gearSlides } from '../../utilities/imageSlides'
-import { ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8, ad9, ad10, ad11, ad12, ad13, ad14, ad15, ad16, ad17 } from '../../utilities/adImages';
+import { ad1, ad4, ad7, ad9, ad10, ad11, ad15, ad16, ad17 } from '../../utilities/adImages';
 
 function Home() {
   return (
@@ -18,7 +18,7 @@ function Home() {
         <div className="cloth-section">
           <ProductSection title="All New, Perfect For You" category="shoes" data={shoeSlides} />
         </div>
-        <div className="ad-section1">
+        <div className="ad-section1 ads">
           <img className="ad-images" src={ad7} alt="ad7" />
           <img className="ad-images" src={ad4} alt="ad4" />
           <img className="ad-images" src={ad1} alt="ad1" />
@@ -26,7 +26,7 @@ function Home() {
         <div className="shoe-section">
           <ProductSection title="Your Kind Of Wear" category="clothing" data={clothSlides} />
         </div>
-        <div className="ad-section2">
+        <div className="ad-section2 ads">
           <div className="ad-heading">
             <h3>What's Trending</h3>
           </div>
@@ -38,7 +38,7 @@ function Home() {
         <div className="gear-section">
           <ProductSection title="Best Of Gears" category="gear" data={gearSlides} />
         </div>
-        <div className="ad-section3">
+        <div className="ad-section3 ads">
           <img className="ad-images" src={ad16} alt="4ad" />
           <img className="ad-images" src={ad11} alt="3ad" />
           <img className="ad-images" src={ad9} alt="2ad1" />
