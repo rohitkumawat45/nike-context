@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {lazy, Suspense} from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
-import Home from './components/Home/Home'
+// import Home from './components/Home/Home'
 import Cart from './components/Cart/Cart'
 import ProductProvider from './context/ProductContext'
 import Contact from './components/Contact/Contact';
@@ -15,6 +15,8 @@ import Products from './components/Products/Products'
 import SearchResult from './components/SearchResult/SearchResult'
 import Login from './components/Login/Login'
 
+const HomeLazy = lazy(()=> import('./components/Home/Home'))
+
 function App() {
   return (
     <>
@@ -23,7 +25,7 @@ function App() {
           <Router>
             <Navbar />
             <Routes>
-              <Route path='/nike-context' index element={<Home />} />
+              <Route path='/nike-context' index element={<Suspense><HomeLazy /></Suspense>} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/categories'element={<Category/>} />
               <Route path='/contact' element={<Contact />} />
